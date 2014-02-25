@@ -1,7 +1,8 @@
-<?php $titre = 'Mon Blog'; ?>
+<?php $titre = 'Mon Blog';
 
-<?php ob_start(); ?>
-<?php foreach ($billets as $billet): ?>
+ob_start();
+
+foreach ($billets as $billet): ?>
   <article>
     <header>
       <h1 class="titreBillet"><?= $billet['titre'] ?></h1>
@@ -10,8 +11,9 @@
     <p><?= $billet['contenu'] ?></p>
   </article>
   <hr />
-<?php endforeach; ?>
-<?php $contenu = ob_get_clean(); ?>
+<?php endforeach;
+$contenu = ob_get_clean(); ?>
 
-<?php require 'gabarit.php'; ?>
+<?php require 'gabarit.php';
+
 
